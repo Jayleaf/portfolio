@@ -1,0 +1,207 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: Chakra;
+  src: url('./assets/fonts/ChakraPetch-Regular.ttf')
+}
+
+* {
+  font-family: Chakra;
+}
+
+
+    body:before {
+      content: "";
+      display: block;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -10;
+      background-image: url('./assets/img/background.jpg');
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+
+*, html, body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.wrapper {
+
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    margin-left: -350px;
+    margin-top: -150px;
+    width: 100%;
+    height: 100%;
+}
+.leftbanner {
+position: absolute;
+margin-left: 600px;
+margin-top: -30px;
+
+}
+
+.leftpanel {
+  display: flexbox;
+}
+
+.leftbannertext {
+  text-align: center;
+  margin-left: 90px;
+  margin-top: 325px;
+  width: 500px;
+  font-family: Chakra;
+  font-size: 25px;
+  background-color: rgba(128, 0, 128, 0.301);
+  border-radius: 50px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+  margin-left: 10px;
+}
+
+.icons {
+  margin-top: 230px;
+  margin-left: 850px;
+}
+
+.btn01 {
+  background-color:rgba(128, 0, 128, 0);
+  border: 0px;
+}
+
+.btn02 {
+  background-color:rgba(128, 0, 128, 0);
+  border: 0px;
+}
+
+#clyde {
+  margin-left: 1px;
+  margin-top: 5px;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  width: 30px;
+  height: 22.5px;
+}
+
+#github {
+  margin-left: 1px;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  width: 30px;
+  height: 30px;
+}
+
+.githubLI {
+  width: 60px;
+  height: 45px;
+}
+
+
+.clydeLI {
+  width: 60px;
+  height: 45px;
+}
+
+
+/* Now onto the portfolio section! */
+
+
+.dropdown {
+  background-color: rgba(128, 0, 128, 0.301);
+  width: 500px;
+  height: 20px;
+  margin-top: 250px;
+  margin-left: 685px;
+  border-radius: 15px;
+  animation-name: backup;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.dropdownbtn {
+  background-color:rgba(128, 0, 128, 0);
+  border: 0px;
+}
+
+.dropdown:hover {
+  animation-name: drop;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  border-radius: 15px;
+}
+
+
+#darrow {
+  width: 16px;
+  height: 10px;
+}
+
+
+
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
+
+@keyframes drop {
+  from {
+    height: 20px;
+  }
+  to {
+    height: 200px;
+  }
+}
+
+@keyframes backup {
+  from {
+    height: var(--dropdown-height)
+  }
+  to {
+    height: 20px;
+  }
+}
